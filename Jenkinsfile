@@ -90,12 +90,12 @@ pipeline {
                }
           }
        }
-	 stage("Trigger CD Pipeline") {
-            steps {
-                script {
-                    sh "curl -v -k --user kvenu:${JENKINS_API_TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-3-26-239-193.ap-southeast-2.compute.amazonaws.com:8080/job/gitops-register-app-cd/buildWithParameters?token=eksspot-token'"
-                }
-            }
-       }
+	 //stage("Trigger CD Pipeline") {
+            //steps {
+                //script {
+                    //sh "curl -v -k --user kvenu:${JENKINS_API_TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-3-26-239-193.ap-southeast-2.compute.amazonaws.com:8080/job/gitops-register-app-cd/buildWithParameters?token=eksspot-token'"
+                //}
+            //}
+       //}
     }
 }
